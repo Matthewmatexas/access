@@ -4,12 +4,124 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Access denied</title>
+    <title>...</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
-<body style="font-family: 'Poppins', sans-serif; color: black; background-color: black; display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh;">
-    <h1>Access denied.</h1>
+<body style="font-family: 'Poppins', sans-serif; color: black; background-color: black; display: flex; justify-content: center; align-items: center; flex-direction: column; width: 100%; height: 100vh;">
+    <style>
+        .lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform: scale(1.5);
+  margin-top: 50px;
+  transition: 0.3s;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+    </style>
+    <audio src="unlock-the-door-1-46012.mp3" id="unlock"></audio>
+    <h1 style="color: white; position: absolute; top: 100px;">Moon_astec☽ darbas</h1>
+    <h2 style="color: white; position: absolute; top: 150px;">IK003</h2>
+    <p style="color: white; font-size: 25px; transition: 0.3s;" id="1">Tikrinamas įrenginys...</p>
+    <p style="color: white; font-size: 25px; opacity: 0; display: none; transition: 0.3s;" id="2">Durys atrakinamos...</p>
+    <p style="color: green; font-size: 25px; opacity: 0; display: none; transition: 0.3s;" id="3">Durys atrakintos.</p>
+    <div class="lds-roller" id="load"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    <div id="confirm" style="color: green; width: 95px; height: 95px; transform: rotate(-360deg); opacity: 0; border-radius: 100%; border: 5px solid green; transition: 0.3s; display: flex; margin-top: -92px; justify-content: center; align-items: center; font-size: 30px; background-color: darkseagreen;"><h1>✔</h1></div>
+    <script>
+        setTimeout(() => {document.getElementById("1").style.opacity = "0";}, 1700);
+        setTimeout(() => {document.getElementById("1").style.display = "none";}, 2000);
+        setTimeout(() => {document.getElementById("2").style.display = "block";}, 2000);
+        setTimeout(() => {document.getElementById("2").style.opacity = "1";}, 2050);
+        setTimeout(() => {document.getElementById("load").style.opacity = "0";}, 3700);
+        setTimeout(() => {document.getElementById("2").style.opacity = "0";}, 3700);
+        setTimeout(() => {document.getElementById("2").style.display = "none";}, 4000);
+        setTimeout(() => {document.getElementById("3").style.display = "block";}, 4000);
+        setTimeout(() => {document.getElementById("3").style.opacity = "1";}, 4050);
+        setTimeout(() => {document.getElementById("confirm").style.opacity = "1";}, 4050);
+        setTimeout(() => {document.getElementById("confirm").style.transform = "rotate(0)";}, 4050);
+        setTimeout(() => {document.getElementById("unlock").play();}, 4050);
+        setTimeout(() => {document.getElementById("unlock").pause();}, 4900);
+    </script>
 </body>
 </html>
