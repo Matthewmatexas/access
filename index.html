@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>...</title>
+    <title>Moon_astec☽ darbas - IK003</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -103,12 +103,20 @@
     <audio src="unlock.mp3" id="unlock"></audio>
     <h1 style="color: white; position: absolute; top: 100px;">Moon_astec☽ darbas</h1>
     <h2 style="color: white; position: absolute; top: 150px;">IK003</h2>
+    <button style="width: 200px; height: 50px; border-radius: 15px; border: 2px solid green; background-color: white; font-family: 'Poppins', sans-serif; font-size: 25px; transition: 0.3s; margin-top: 40%;" id="btn" onclick="unlock()">Atrakinti duris</button>
+    <div style="opacity: 0; display: none; transition: 0.3s; display: flex; justify-content: center; align-items: center; flex-direction: column;" id="divas">
     <p style="color: white; font-size: 25px; transition: 0.3s;" id="1">Tikrinamas įrenginys...</p>
     <p style="color: white; font-size: 25px; opacity: 0; display: none; transition: 0.3s;" id="2">Durys atrakinamos...</p>
     <p style="color: green; font-size: 25px; opacity: 0; display: none; transition: 0.3s;" id="3">Durys atrakintos.</p>
     <div class="lds-roller" id="load"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     <div id="confirm" style="color: green; width: 95px; height: 95px; transform: rotate(-360deg); opacity: 0; border-radius: 100%; border: 5px solid green; transition: 0.3s; display: flex; margin-top: -92px; justify-content: center; align-items: center; font-size: 30px; background-color: darkseagreen;"><h1>✔</h1></div>
+    </div>
     <script>
+      function unlock(){
+        document.getElementById("btn").style.opacity = "0";
+        setTimeout(() => {document.getElementById("btn").style.display = "none";}, 300);
+        setTimeout(() => {document.getElementById("divas").style.display = "flex";}, 300);
+        setTimeout(() => {document.getElementById("divas").style.opacity = "1";}, 350);
         setTimeout(() => {document.getElementById("1").style.opacity = "0";}, 1700);
         setTimeout(() => {document.getElementById("1").style.display = "none";}, 2000);
         setTimeout(() => {document.getElementById("2").style.display = "block";}, 2000);
@@ -122,6 +130,7 @@
         setTimeout(() => {document.getElementById("confirm").style.transform = "rotate(0)";}, 4050);
         setTimeout(() => {document.getElementById("unlock").play();}, 4050);
         setTimeout(() => {document.getElementById("unlock").pause();}, 4900);
+      }
     </script>
 </body>
 </html>
